@@ -1,39 +1,50 @@
-slug: inner-connect-2
-id: vpxwnfrx5qbn
-title: inner-connect-2
+slug: service-interconnect
+id: nrxvnbrjrvsz
+title: Service Interconnect
 description: |
   ## Goal
 
-  The goal of this track is to learn CI/CD with the Ansible Automation Platform and Jenkins on OpenShift.
+  In this module you discover how to build a service network to connect disparate services across different environments using [Red Hat Service Interconnect](https://developers.redhat.com/products/service-interconnect/overview).
 
   |What you need to know before you start|
   |----|
-  |In order to get full benefit from taking this track you should...<br>• Be comfortable working at the command line in a terminal window.<br>• Have a general understanding about the purpose and use of [OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift/container-platform)|
+  |In order to get full benefit from taking this track you should...<br>• Be comfortable working at the command line in a terminal window.<br>• Have a general understanding about the purpose and use of [OpenShift](https://www.redhat.com/en/technologies/cloud-computing/openshift/container-platform) or Kubernetes|
 
-  ## What's CI/CD?
-  A subset of application deployment, continuous deployment pipelines help developers release new software features and update more frequently to support modern business demands. Red Hat Ansible Automation Platform provides the multi-tier, multi-step application orchestration needed for fast, reliable deployment of new features, bug fixes, and code changes while reducing the need for human intervention throughout the release process.
+  ## What is Red Hat Service Interconnect?
+  Red Hat Service Interconnect enables application and service connectivity across different environments through layer 7 addressing and routing. Using a simple command line interface, interconnections are created in a matter of minutes, avoiding extensive networking planning, and overhead. All interconnections between environments use mutual TLS to keep your organization’s infrastructure and data protected. Red Hat Service Interconnect is based on the open source [Skupper](https://skupper.io/index.html) project.
 
   ## Lab architecture
-  ![architecturediagram](https://github.com/redhat-developer-demos/ansible-automation-platform-continous-delivery-demo/blob/main/assets/ansible_final1.jpg?raw=true)
+  ![architecturediagram](https://github.com/redhat-deveoper-demos/ansible-automation-platform-continous-delivery-demo/blob/main/assets/ansible_final1.jpg?raw=true)
+  **TODO**
+  This example is a simple database-backed web application that shows how you can use Skupper to access a database at a remote site without exposing it to the public internet.
+
+  It contains three services:
+
+  A PostgreSQL database running on a bare-metal or virtual machine in a private data center.
+
+  A payment-processing service running on Kubernetes in a private data center.
+
+  A web frontend service running on Kubernetes in the public cloud. It uses the PostgreSQL database and the payment-processing service.
 
   This Instruqt track provides hands-on experience in deploying CI/CD pipeline using the Ansible Automation Platform and Jenkins on Openshift.
+
+
+  In the next chapter, you will be guided through setting up a service network between all these services across different environments to make the patient portal fucntional.
 
   Let's get started!
 icon: https://logodix.com/logo/1910931.png
 tags:
 - openshift
-- ansible
-- AAP
-- jenkins
-- ci/cd
-- ci-cd
-- Automation
+- skupper
+- serviceinterconnect
+- connectivity
 owner: openshift
 developers:
 - narathod@redhat.com
+- codingsaduvu@gmail.com
 timelimit: 5000
 lab_config:
   overlay: false
   width: 33
   position: right
-checksum: "14211628841977502545"
+checksum: "282369176257354410"

@@ -1,8 +1,8 @@
 ---
-slug: aap-installation-login
-id: gzr6lqbtu4v7
+slug: installation
+id: qzaqgmxpwd7d
 type: challenge
-title: Step 1 - Ansible Automation platform Installation & Login
+title: Step 1 - Installation and setup
 notes:
 - type: text
   contents: |+
@@ -21,29 +21,22 @@ notes:
 
 
 tabs:
-- title: Terminal vm
-  type: terminal
-  hostname: container
-- title: Visual Editor
-  type: code
-  hostname: container
-  path: /root/backend
 - title: Terminal-public
   type: terminal
   hostname: crc
-- title: public Web Console
-  type: website
-  url: https://console-openshift-console.crc-lgph7-master-0.crc.${_SANDBOX_ID}.instruqt.io
-  new_window: true
 - title: Terminal-private
   type: terminal
   hostname: crc-1
-- title: Web Console
+- title: public Console
   type: website
   url: https://console-openshift-console.crc-lgph7-master-0.crc.${_SANDBOX_ID}.instruqt.io
   new_window: true
+- title: Visual Edit Private
+  type: code
+  hostname: crc-1
+  path: /home/
 difficulty: basic
-timelimit: 9000
+timelimit: 1000
 ---
 
 # CI/CD with Ansible Automation Platform and Jenkins

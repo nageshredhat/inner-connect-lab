@@ -229,5 +229,12 @@ do
     sleep 6
 done
 
+# public frontend deploy
+
+oc create ns public
+oc project public
+
+
+
 echo $(date)
 echo "### Boostrap END ###"
